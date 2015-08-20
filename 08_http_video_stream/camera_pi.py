@@ -1,4 +1,4 @@
-#!/usr/bin/python                                                                                                                                                       
+#!/usr/bin/python
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #|R|a|s|p|b|e|r|r|y|P|i|.|c|o|m|.|t|w|
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -16,6 +16,8 @@ import cv2
 class Camera(object):
     def __init__(self):
         self.video = cv2.VideoCapture(0)
+        self.video.set(cv2.cv.CV_CAP_PROP_FRAME_WIDTH,  640)
+        self.video.set(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, 480)
     
     def __del__(self):
         self.video.release()

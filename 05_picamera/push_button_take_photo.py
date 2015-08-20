@@ -24,7 +24,7 @@ def callback_function(channel):
     print("Start to take a photo...")
     with picamera.PiCamera() as camera:
         # Camera warm-up time
-        time.sleep(2)
+        #time.sleep(2)
         # The default resolution is 1280x800
         camera.capture('image.jpg')
     print("End to take")

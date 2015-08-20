@@ -16,6 +16,9 @@ import os
 url = "http://api.imagga.com/v1/content"
 files = {"file": open("/home/pi/image.jpg", "rb")}
 
+#
+# replace "authorization: "Basic ..." with your Authorization (api_key:api_secret)
+#
 headers = { 
     "accept": "application/json",
     "authorization": "Basic YWNjXzJkYzdkNzNjMmYwODliMToxYzQ3Yzg2ZDg0YjdmYjdjYjZjNzQ1NTQ1MmYwNTgzMQ=="

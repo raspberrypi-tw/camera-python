@@ -12,6 +12,9 @@
 import requests
 import json
 
+#
+# replace "authorization: "Basic ..." with your Authorization (api_key:api_secret)
+#
 url = "http://api.imagga.com/v1/tagging"
 querystring = {"url":"http://playground.imagga.com/static/img/example_photo.jpg"}
 headers = {
