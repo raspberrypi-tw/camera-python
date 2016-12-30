@@ -7,7 +7,7 @@
 # Face detect from image
 #
 # Author : Shantnu
-# Date   : 06/06/2014
+# Date   : 06/06/2017
 # Origin : https://github.com/shantnu/FaceDetect/blob/master/face_detect.py
 # Usage  : python image_face_detect.py abba.png haarcascade_frontalface_default.xml
 

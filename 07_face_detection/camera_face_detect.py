@@ -7,12 +7,13 @@
 # Face detect from camera
 #
 # Author : Fletcher Heisler, Michael Herman, Jeremy Johnson
-# Date   : 06/22/2014
+# Date   : 06/22/2017
 # Origin : https://realpython.com/blog/python/face-detection-in-python-using-a-webcam/
 # Usage  : python camera_face_detect.py haarcascade_frontalface_default.xml
 
 import cv2
 import sys
+import time
 
 cascPath = sys.argv[1]
 faceCascade = cv2.CascadeClassifier(cascPath)
@@ -23,6 +24,7 @@ cap.set(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, 240)
 
 while True:
     # Capture frame-by-frame
+    before = time.time()
     ret, frame = cap.read()
 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -35,7 +37,8 @@ while True:
         flags=cv2.cv.CV_HAAR_SCALE_IMAGE
     )
 
-    print "Found {0} faces!".format(len(faces))
+    after = time.time()
+    print "Found {0} faces!, fps= {1}".format(len(faces), round(1/(after-before), 1))
 
     # Draw a rectangle around the faces
     for (x, y, w, h) in faces:

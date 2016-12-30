@@ -2,7 +2,7 @@
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #|R|a|s|p|b|e|r|r|y|P|i|.|c|o|m|.|t|w|
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-# Copyright (c) 2014, raspberrypi.com.tw
+# Copyright (c) 2017, raspberrypi.com.tw
 # All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
@@ -11,7 +11,7 @@
 # Date   : 05/31/2015
 # A simple page of flask
 
-from flask import Flask, render_template, Response
+from flask import Flask
 
 app = Flask(__name__)
 
